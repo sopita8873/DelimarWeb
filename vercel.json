@@ -12,14 +12,13 @@
   ],
   "routes": [
     {
-      "handle": "filesystem"
+      "handle": "filesystem" // Primero, intenta servir un archivo estático si existe
     },
     {
-      "src": "/(.*)",
-      "dest": "/index.html"
+      "src": "/(.*)", // Para cualquier otra ruta que no sea un archivo estático...
+      "dest": "/index.html" // ...devuelve siempre index.html
     }
   ],
-  "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "installCommand": "cd frontend && npm install"
 }
