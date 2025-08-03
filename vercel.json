@@ -12,11 +12,11 @@
   ],
   "routes": [
     {
-      "handle": "filesystem" // Primero, intenta servir un archivo estático si existe
+      "handle": "filesystem"
     },
     {
-      "src": "/(.*)", // Para cualquier otra ruta que no sea un archivo estático...
-      "dest": "/index.html" // ...devuelve siempre index.html
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ],
   "outputDirectory": "frontend/dist",
